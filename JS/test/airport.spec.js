@@ -7,7 +7,7 @@ import militaryType from '../models/militaryType.js';
 import experimentalTypes from '../models/experimentalTypes.js';
 import classificationLevel from '../models/classificationLevel.js';
 
-describe('My Test', () => {
+describe('Airport Test', () => {
   const testData = [
     new PassengerPlane('Boeing-737', 900, 12000, 60500, 164),
     new PassengerPlane('Boeing-737-800', 940, 12300, 63870, 192),
@@ -23,7 +23,7 @@ describe('My Test', () => {
     new MilitaryPlane('F-15', 1500, 12000, 10000, militaryType.fighter),
     new MilitaryPlane('F-22', 1550, 13000, 11000, militaryType.fighter),
     new MilitaryPlane('C-130 Hercules', 650, 5000, 110000, militaryType.transport),
-    new ExperimentalPlane('Bell X-14', 277, 482, 500, experimentalTypes.hightAltitude, classificationLevel.secret),
+    new ExperimentalPlane('Bell X-14', 277, 482, 500, experimentalTypes.highAltitude, classificationLevel.secret),
     new ExperimentalPlane('Ryan X-13 Vertijet', 560, 307, 500, experimentalTypes.verticalTakeOffLanding, classificationLevel.topSecret),
   ];
   const maximumPassengersCapacity = 242;
@@ -47,9 +47,9 @@ describe('My Test', () => {
 
   it('experimental planes should have classification level higher than unclassified', () => {
     const airport = new Airport(testData);
-    const expectedExperimentalUnclassifiedPlane = airport.getExperimentalPlanes()
+    const isExperimentalUnclassifiedPlaneExist = airport.getExperimentalPlanes()
       .some((plane) => plane.getClassificationLevel() === classificationLevel.unclassified);
-    assert.isFalse(expectedExperimentalUnclassifiedPlane);
+    assert.isFalse(isExperimentalUnclassifiedPlaneExist);
   });
 });
 

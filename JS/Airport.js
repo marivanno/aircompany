@@ -16,7 +16,7 @@ class Airport {
     return this.planes;
   }
 
-  getPassengerPlane() {
+  getPassengerPlanes() {
     return this.planes.filter((plane) => plane instanceof PassengerPlane);
   }
 
@@ -37,7 +37,7 @@ class Airport {
   }
 
   getPassengerPlaneWithMaximumPassengersCapacity() {
-    return this.getPassengerPlane()
+    return this.getPassengerPlanes()
       .sort((a, b) => b.getMaximumPassengersCapacity() - a.getMaximumPassengersCapacity())[0];
   }
 
