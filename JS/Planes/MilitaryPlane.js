@@ -1,16 +1,18 @@
-const Plane = require('./Plane');
+import Plane from './Plane.js';
 
 class MilitaryPlane extends Plane {
+  constructor(model, maximumSpeed, maximumFlightDistance, maximumLoadCapacity, militaryType) {
+    super(model, maximumSpeed, maximumFlightDistance, maximumLoadCapacity);
+    this.militaryType = militaryType;
+  }
 
-    constructor(model, maxSpeed, maxFlightDistance, maxLoadCapacity, militaryType) {
-        super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
-        this.militaryType = militaryType;
+  getMilitaryType() {
+    return this.militaryType;
+  }
 
-    }
-
-    getMilitaryType() {
-        return this.militaryType;
-    }
+  setMilitaryType(militaryType) {
+    this.militaryType = militaryType;
+  }
 }
 
-module.exports = MilitaryPlane;
+export default MilitaryPlane;
