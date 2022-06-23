@@ -29,11 +29,11 @@ class Airport {
   }
 
   getTransportMilitaryPlanes() {
-    return this.getMilitaryPlanes().filter((plane) => plane.getMilitaryType() === militaryType.transport);
+    return this.getMilitaryPlanes().filter((plane) => plane.getMilitaryType() === militaryType.TRANSPORT);
   }
 
   getBomberMilitaryPlanes() {
-    return this.getMilitaryPlanes().filter((plane) => plane.getMilitaryType() === militaryType.bomber);
+    return this.getMilitaryPlanes().filter((plane) => plane.getMilitaryType() === militaryType.BOMBER);
   }
 
   getPassengerPlaneWithMaximumPassengersCapacity() {
