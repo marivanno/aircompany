@@ -1,7 +1,5 @@
-export const militaryType = {
-    fighter: 'Fighter',
-    bomber: 'Bomber',
-    transport: 'Transport'
+export default {
+    FIGHTER: 'Fighter',
+    BOMBER: 'Bomber',
+    TRANSPORT: 'Transport'
 };
-
-export default militaryType;

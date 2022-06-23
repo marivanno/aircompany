@@ -1,8 +1,7 @@
-const classificationLevel = {
-    unclassified: 'Unclassified',
-    confidential: 'Confidential',
-    secret: 'Secret',
-    topSecret: 'Top Secret'
+export default {
+    UNCLASSIFIED: 'Unclassified',
+    CONFIDENTIAL: 'Confidential',
+    SECRET: 'Secret',
+    TOP_SECRET: 'Top Secret'
 };
 
-export default classificationLevel;
